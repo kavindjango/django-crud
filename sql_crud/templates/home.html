@@ -58,9 +58,9 @@
 
         $("document").ready(function(){
             $('#search').keyup(function(){
-                var value=$(thish).val().toLowerCase()
+                var value=$(this).val().toLowerCase()
                 $("#mytable tr").filter(function(){
-                    alert($(thish).text().toLowerCase().indexOf(value)> -1);
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
                 });
             });
         });
